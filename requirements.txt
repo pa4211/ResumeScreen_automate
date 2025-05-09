@@ -1,1 +1,3 @@
-fitz
+streamlit
+PyMuPDF
+requests
