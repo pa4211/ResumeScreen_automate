@@ -3,7 +3,7 @@ import requests
 import fitz  # PyMuPDF for PDF text extraction
 import io
 
-st.title("Upload JD and Resumes to n8n")
+st.title("Resume Screen")
 
 # Upload JD PDF (only one allowed)
 jd_file = st.file_uploader("Upload JD PDF", type="pdf", accept_multiple_files=False)
@@ -11,7 +11,7 @@ jd_file = st.file_uploader("Upload JD PDF", type="pdf", accept_multiple_files=Fa
 # Upload multiple Resume PDFs
 resume_files = st.file_uploader("Upload Resume PDFs", type="pdf", accept_multiple_files=True)
 
-if jd_file and resume_files and st.button("Send to n8n"):
+if jd_file and resume_files and st.button("Send"):
     webhook_url = "https://digitalrecruiter.app.n8n.cloud/webhook/c1aebe67-c21e-4f9c-893c-3fcca86cc771"
     # --- 1. Extract text from JD PDF using PyMuPDF ---
     jd_bytes = jd_file.read()
